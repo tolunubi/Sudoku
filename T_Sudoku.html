@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Tolu's Sudoku Solver</title>
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+			table, td {
+				border: 1px solid black;
+			}
+			td {
+				height: 20px;
+				width: 20px;
+			}
+			[id^="_"] {
+				background-color: rgba(255,0,0,0.5);
+			}
+			.Init {
+				background-color: rgba(0,0,255,0.5);	
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<table id="sudokuTable">
+			<tr>
+				<td id="cell_00" align="center"></td>
+				<td id="cell_01" align="center"></td>
+				<td id="cell_02" align="center"></td>
+				<td id="cell_03" align="center"></td>
+				<td id="cell_04" align="center"></td>
+				<td id="cell_05" align="center"></td>
+				<td id="cell_06" align="center"></td>
+				<td id="cell_07" align="center"></td>
+				<td id="cell_08" align="center"></td>
+			</tr>
+			<tr>
+				<td id="cell_10" align="center"></td>
+				<td id="cell_11" align="center"></td>
+				<td id="cell_12" align="center"></td>
+				<td id="cell_13" align="center"></td>
+				<td id="cell_14" align="center"></td>
+				<td id="cell_15" align="center"></td>
+				<td id="cell_16" align="center"></td>
+				<td id="cell_17" align="center"></td>
+				<td id="cell_18" align="center"></td>
+			</tr>
+			<tr>
+				<td id="cell_20" align="center"></td>
+				<td id="cell_21" align="center"></td>
+				<td id="cell_22" align="center"></td>
+				<td id="cell_23" align="center"></td>
+				<td id="cell_24" align="center"></td>
+				<td id="cell_25" align="center"></td>
+				<td id="cell_26" align="center"></td>
+				<td id="cell_27" align="center"></td>
+				<td id="cell_28" align="center"></td>
+			</tr>
+			<tr>
+				<td id="cell_30" align="center"></td>
+				<td id="cell_31" align="center"></td>
+				<td id="cell_32" align="center"></td>
+				<td id="cell_33" align="center"></td>
+				<td id="cell_34" align="center"></td>
+				<td id="cell_35" align="center"></td>
+				<td id="cell_36" align="center"></td>
+				<td id="cell_37" align="center"></td>
+				<td id="cell_38" align="center"></td>
+			</tr>
+			<tr>
+				<td id="cell_40" align="center"></td>
+				<td id="cell_41" align="center"></td>
+				<td id="cell_42" align="center"></td>
+				<td id="cell_43" align="center"></td>
+				<td id="cell_44" align="center"></td>
+				<td id="cell_45" align="center"></td>
+				<td id="cell_46" align="center"></td>
+				<td id="cell_47" align="center"></td>
+				<td id="cell_48" align="center"></td>
+			</tr>
+			<tr>
+				<td id="cell_50" align="center"></td>
+				<td id="cell_51" align="center"></td>
+				<td id="cell_52" align="center"></td>
+				<td id="cell_53" align="center"></td>
+				<td id="cell_54" align="center"></td>
+				<td id="cell_55" align="center"></td>
+				<td id="cell_56" align="center"></td>
+				<td id="cell_57" align="center"></td>
+				<td id="cell_58" align="center"></td>
+			</tr>
+			<tr>
+				<td id="cell_60" align="center"></td>
+				<td id="cell_61" align="center"></td>
+				<td id="cell_62" align="center"></td>
+				<td id="cell_63" align="center"></td>
+				<td id="cell_64" align="center"></td>
+				<td id="cell_65" align="center"></td>
+				<td id="cell_66" align="center"></td>
+				<td id="cell_67" align="center"></td>
+				<td id="cell_68" align="center"></td>
+			</tr>
+			<tr>
+				<td id="cell_70" align="center"></td>
+				<td id="cell_71" align="center"></td>
+				<td id="cell_72" align="center"></td>
+				<td id="cell_73" align="center"></td>
+				<td id="cell_74" align="center"></td>
+				<td id="cell_75" align="center"></td>
+				<td id="cell_76" align="center"></td>
+				<td id="cell_77" align="center"></td>
+				<td id="cell_78" align="center"></td>
+			</tr>
+			<tr>
+				<td id="cell_80" align="center"></td>
+				<td id="cell_81" align="center"></td>
+				<td id="cell_82" align="center"></td>
+				<td id="cell_83" align="center"></td>
+				<td id="cell_84" align="center"></td>
+				<td id="cell_85" align="center"></td>
+				<td id="cell_86" align="center"></td>
+				<td id="cell_87" align="center"></td>
+				<td id="cell_88" align="center"></td>
+			</tr>
+		</table>
+
+		<!--<button onclick="clear_sudokuTable()">Clear Table</button>-->
+		<button onclick="solve_sudoku ()">Solve</button>
+		<!--<button onclick="solve_sudoku_2 ()">Solve</button>-->
+		<script src="C:\Users\Tolu\Documents\Web Programming\Web Sudoku Solver\T_SudokuSolver_Recursive.js"></script>
+		<script src="C:\Users\Tolu\Documents\Web Programming\Web Sudoku Solver\T_SudokuSolver_Recursive_UnitTests.js"></script>
+	</body>
+</html>
